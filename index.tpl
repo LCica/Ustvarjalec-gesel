@@ -24,7 +24,7 @@
       </tr>
       <tr>
         <td>Male črke?</td>
-        <td><input type="checkbox"></td>
+        <td><input type="checkbox" ></td>
       </tr>
       <tr>
         <td>Velike črke?</td>
@@ -35,7 +35,13 @@
         <td><input type="checkbox"></td>
       </tr>   
     </table>
-    Dolžina gesla:<button type="submit"></button>
+    <form action= "/geslo/" method="POST">
+      <label>Dolžina gesla:
+        <input type="text" name="dolzina">
+      </label>
+      <input type="submit" value="Zgeneriraj Geslo"/>
+    </form>
+    
     
 </body>
 
