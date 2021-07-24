@@ -20,25 +20,29 @@ def dodaj_st():
         tretji = (bottle.request.forms.get('tretja'))
         cetrti = (bottle.request.forms.get('cetrta'))
         dolzina = int(bottle.request.forms.get('dolzine'))               
-        st=[]
-        mc=[]
-        vc=[]
-        si=[]
-        if prvi == '1':
-            st += ['0','1','2','3','4','5','6','7','8','9']
-        if drugi == '2':
-            mc += ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y','z']
-        if tretji == '3':
-            vc += ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-        if cetrti == '4':
-            si += ['@', '#', '$', '%', '=', ':', '?', '.', '/', '|', '~', '>', '*', '(', ')', '<']             
+        st=['0','1','2','3','4','5','6','7','8','9']
+        mc=['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y','z']
+        vc=['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+        si=['@', '#', '$', '%', '=', ':', '?', '.', '/', '|', '~', '>', '*', '(', ')', '<']   
         VSE_SKP = st + mc + vc + si
-        rand_cifra = random.choice(st)
-        rand_male = random.choice(mc)
-        rand_velke = random.choice(vc)
-        rand_simbol = random.choice(si)
-        rand_skp = rand_cifra + rand_male + rand_velke + rand_simbol
-        for x in range(dolzina - 4):
+        if prvi != '1':
+            for el in VSE_SKP:
+                if el in st:
+                    VSE_SKP.remove(el) 
+        if drugi != '2':
+            for el in VSE_SKP:
+                if el in mc:
+                    VSE_SKP.remove(el) 
+        if tretji != '3':
+            for el in VSE_SKP:
+                if el in vc:
+                    VSE_SKP.remove(el) 
+        if cetrti != '4':
+            for el in VSE_SKP:
+                if el in si:
+                    VSE_SKP.remove(el)                   
+        rand_skp = ""
+        for x in range(dolzina):
             rand_skp += random.choice(VSE_SKP)
             rand_skp_list = array.array('u',rand_skp)    
             random.shuffle(rand_skp_list)

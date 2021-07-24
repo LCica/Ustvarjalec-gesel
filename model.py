@@ -3,26 +3,28 @@ import array
 import json
 
 datoteka_s_s = 'stanje.json'
-
+st = list()
+mc = list()
+vc = list()
+si = list()
+#def dodaj_st():    
+#    st.append('0','1','2','3','4','5','6','7','8','9')
+#    return st
 class Geslo:
-    def __init__(self, dolzina,st=None,mc=None,vc = None,si = None):
+    def __init__(self, dolzina=0,st=None,mc=None,vc = None,si = None):
         self.dolzina = dolzina
         self.st= st or list()
         self.mc= mc or list()
         self.vc= vc or list()
         self.si = si or list() 
-    def dodaj_st(self, odg):
-        if odg == True:
-            self.st = ['0','1','2','3','4','5','6','7','8','9']
-    def dodaj_mc(self, odg):
-        if odg == True:
-            self.mc = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y','z']
-    def dodaj_vc(self, odg):
-        if odg == True:
-            self.vc = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-    def dodaj_si(self, odg):
-        if odg == True:
-            self.si = ['@', '#', '$', '%', '=', ':', '?', '.', '/', '|', '~', '>', '*', '(', ')', '<']
+    def dodaj_st(self):
+        self.st = ['0','1','2','3','4','5','6','7','8','9']
+    def dodaj_mc(self):
+        self.mc = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y','z']
+    def dodaj_vc(self):
+        self.vc = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+    def dodaj_si(self):
+        self.si = ['@', '#', '$', '%', '=', ':', '?', '.', '/', '|', '~', '>', '*', '(', ')', '<']
     def geslo(self):
         VSE_SKP = self.dodaj_st() + self.dodaj_mc() + self.dodaj_vc() + self.dodaj_si()
         rand_cifra = random.choice(self.dodaj_st())
@@ -37,7 +39,8 @@ class Geslo:
         geslo = ""
         for x in rand_skp_list:
             geslo += x
-        return geslo 
+        return geslo
+
 class Generator:
     def __init__(self,datoteka_s_s):
         self.max_id = 0

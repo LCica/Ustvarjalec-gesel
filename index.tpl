@@ -1,47 +1,21 @@
+
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Vislice</title>
-    <style type="text/css">
-        h1 { color: red;}
-        body { background-color: lightyellow;}
-    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geslo</title>   
 </head>
-
 <body>
-    <h1>Generator gesel!</h1>
-    <table>
-      <tr>
-               
-        <th>Katere znake naj vsebuje vaše geslo?</th>
-        
-      </tr>
-      <tr>
-        
-        <td>Številke?</td>
-        <td><input type="checkbox"></td>
-      </tr>
-      <tr>
-        <td>Male črke?</td>
-        <td><input type="checkbox" ></td>
-      </tr>
-      <tr>
-        <td>Velike črke?</td>
-        <td><input type="checkbox"></td>
-      </tr>
-      <tr>
-        <td>Simbole?</td>
-        <td><input type="checkbox"></td>
-      </tr>   
-    </table>
-    <form action= "/geslo/" method="POST">
-      <label>Dolžina gesla:
-        <input type="text" name="dolzina">
-      </label>
-      <input type="submit" value="Zgeneriraj Geslo"/>
-    </form>
-    
+  <form method="POST" action="/geslo/">
+    CH1<input type="checkbox" name="prva" value="1">
+    CH2<input type="checkbox" name="druga" value="2">
+    CH3<input type="checkbox" name="tretja" value="3">
+    CH4<input type="checkbox" name="cetrta" value="4">
+    <input type="text" name="dolzine">
+    <input type="submit" name="vnesi">
+  </form>
     
 </body>
 
