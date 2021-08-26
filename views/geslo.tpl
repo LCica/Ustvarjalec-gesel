@@ -5,9 +5,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geslo</title>   
+    <title>Geslo</title>  
+    <style>
+      body{
+          background: black}
+      .center{
+        position: relative;
+        background-color: gray;
+        left: 25%;
+        margin-top: 25px; 
+        width: 50%;
+        height: 500px ;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+    </style> 
 </head>
 <body>
+  <div class="center">
     <form method="POST" action="/geslo/" >
         <table>    
           <tr>
@@ -32,7 +47,8 @@
         </table>
           <input type="submit" name="vnesi" >
     </form>
-    <label >Vaše geslo je: {{ geslo }}</label>
+    <label>Vaše geslo je: {{ geslo }}</label>
+  </div>
 </body>
     
 </html>

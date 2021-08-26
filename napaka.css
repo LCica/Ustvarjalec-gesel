@@ -1,0 +1,16 @@
+
+body {
+    background-color: red
+}
+
+
+
+.prvi {
+    width: 22px;
+    height: 22px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance:none;
+    outline: 1px solid blue;
+}

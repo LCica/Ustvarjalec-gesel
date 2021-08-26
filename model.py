@@ -2,59 +2,52 @@ import random
 import array
 import json
 
-datoteka_s_s = 'stanje.json'
-st = list()
-mc = list()
-vc = list()
-si = list()
-#def dodaj_st():    
-#    st.append('0','1','2','3','4','5','6','7','8','9')
-#    return st
+DATOTEKA_S_S = 'stanje.json'
+
 class Geslo:
-    def __init__(self, dolzina=0,st=None,mc=None,vc = None,si = None):
-        self.dolzina = dolzina
-        self.st= st or list()
-        self.mc= mc or list()
-        self.vc= vc or list()
-        self.si = si or list() 
-    def dodaj_st(self):
-        self.st = ['0','1','2','3','4','5','6','7','8','9']
-    def dodaj_mc(self):
-        self.mc = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y','z']
-    def dodaj_vc(self):
-        self.vc = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-    def dodaj_si(self):
-        self.si = ['@', '#', '$', '%', '=', ':', '?', '.', '/', '|', '~', '>', '*', '(', ')', '<']
-    def geslo(self):
-        VSE_SKP = self.dodaj_st() + self.dodaj_mc() + self.dodaj_vc() + self.dodaj_si()
-        rand_cifra = random.choice(self.dodaj_st())
-        rand_male = random.choice(self.dodaj_mc())
-        rand_velke = random.choice(self.dodaj_vc())
-        rand_simbol = random.choice(self.dodaj_si())
-        rand_skp = rand_cifra + rand_male + rand_velke + rand_simbol
-        for x in range(self.dolzina-4):
-            rand_skp += random.choice(VSE_SKP)
+    def __init__(self,DATOTEKA_S_S):
+        
+        self.datoteka_s_s = DATOTEKA_S_S
+        self.gesla = {}
+        self.max_id = 0    
+    def geslo(self,prvi=True,drugi=True,tretji=True,cetrti=True,dolzina=0):
+        vse = []        
+        if int(prvi) == 1:
+            vse += ['0','1','2','3','4','5','6','7','8','9']
+        if int(drugi) == 2:
+            vse += ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'y','z']
+        if int(tretji) == 3:
+            vse += ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'Y', 'Z']
+        if int(cetrti) == 4:
+            vse += ['@', '#', '$', '%', '=', ':', '?', '.', '/', '|', '~', '>', '*', '(', ')', '<']
+        rand_skp = ""
+        for x in range(dolzina):
+            rand_skp += random.choice(vse)
             rand_skp_list = array.array('u',rand_skp)    
             random.shuffle(rand_skp_list)
         geslo = ""
         for x in rand_skp_list:
             geslo += x
         return geslo
-
-class Generator:
-    def __init__(self,datoteka_s_s):
-        self.max_id = 0
-        self.gesla = {}
-        self.datoteka_s_s = datoteka_s_s
     def prost_id(self):
         self.max_id += 1
         return self.max_id
-    def novo_geslo(self):
-        pass
+    def novo_geslo(self,geslo):
+        id_gesla=self.prost_id()
+        self.gesla[id_gesla]= (geslo)
+        self.zapisi_geslo_v_datoteko()
+        return id_gesla
     def zapisi_geslo_v_datoteko(self):
         with open(self.datoteka_s_s,'w',encoding="utf-8") as f:
-            gesla = {id_gesla: (geslo.geslo,geslo.dolzina) for id_gesla,(geslo,dolzina) in self.gesla.items()}
+            gesla = self.gesla
             json.dump(gesla,f)
+
+
+
+
+
+
+
 
 
 
@@ -109,7 +102,22 @@ class Generator:
 
 
 
-
+#def odstrani_st(self):
+    #    for znak in self.st:
+    #        if znak in self.vse:
+    #            self.vse.remove(znak)
+    #def odstrani_mc(self):
+    #    for znak in self.mc:
+    #        if znak in self.vse:
+    #            self.vse.remove(znak)
+    #def odstrani_vc(self):
+    #    for znak in self.vc:
+    #        if znak in self.vse:
+    #            self.vse.remove(znak)
+    #def odstrani_si(self):
+        #for znak in self.si:
+        #    if znak in self.vse:
+        #        self.vse.remove(znak)  
 
 
 

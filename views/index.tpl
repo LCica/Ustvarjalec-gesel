@@ -8,6 +8,7 @@
     <title>Geslo</title>   
 </head>
 <body>
+  <h1>Generator gesel</h1>
   <form method="POST" action="/geslo/" >
   <table>    
     <tr>
