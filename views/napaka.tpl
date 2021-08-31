@@ -23,11 +23,19 @@
           <td><input type="checkbox" name="cetrta" value="4"></td>
         </tr>
         <tr>
+          <td>Kopiraj geslo</td>
+          <td><input type="checkbox" name="ctrlc" value="1"></td>
+        </tr>
+        <tr>
           <td>Dolžina?</td>
           <td><input type="text" name="dolzine"></td></tr>
       </table>
         <button type="submit" class="offset">Novo Geslo</button>
   </form>
+  
+  </div>
+  <div class="napaka">
+  <h4>* PROSIMO IZBERITE VSAJ ENO VRSTO KARAKTERJEV IN VNESITE ZAŽELJENO DOLŽINO!</h4>
   </div>
 </body>
 </html>

@@ -29,7 +29,7 @@
         <td>Dolžina?</td>
         <td><input type="text" name="dolzine"></td></tr>
     </table>
-      <button type="submit" class="offset">Novo Geslo</button>
+      <button type="submit" class="offset">Zgeneriraj Geslo</button>
 </form>
 </div>
 </body>
