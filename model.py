@@ -21,7 +21,7 @@ class Geslo:
         if int(cetrti) == 4:
             vse += ['@', '#', '$', '%', '=', ':', '?', '.', '/', '|', '~', '>', '*', '(', ')', '<']
         rand_skp = ""
-        for x in range(dolzina):
+        for x in range(int(dolzina)):
             rand_skp += random.choice(vse)
             rand_skp_list = array.array('u',rand_skp)    
             random.shuffle(rand_skp_list)
@@ -101,23 +101,7 @@ class Geslo:
 #
 
 
-
-#def odstrani_st(self):
-    #    for znak in self.st:
-    #        if znak in self.vse:
-    #            self.vse.remove(znak)
-    #def odstrani_mc(self):
-    #    for znak in self.mc:
-    #        if znak in self.vse:
-    #            self.vse.remove(znak)
-    #def odstrani_vc(self):
-    #    for znak in self.vc:
-    #        if znak in self.vse:
-    #            self.vse.remove(znak)
-    #def odstrani_si(self):
-        #for znak in self.si:
-        #    if znak in self.vse:
-        #        self.vse.remove(znak)  
+ 
 
 
 
