@@ -3,7 +3,7 @@ import model
 import pyperclip
 gesla = model.Geslo(model.DATOTEKA_S_S)
 
-with open("Skrivnost.txt") as f:
+with open("skrivnost.txt") as f:
     SKRIVNOST = f.read()
 
 
