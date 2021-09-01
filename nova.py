@@ -2,7 +2,9 @@ import bottle
 import model
 import pyperclip
 gesla = model.Geslo(model.DATOTEKA_S_S)
-SKRIVNOST='moja skrivnost'
+
+with open("Skrivnost.txt") as f:
+    SKRIVNOST = f.read()
 
 
 @bottle.get("/")
