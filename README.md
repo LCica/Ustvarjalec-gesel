@@ -9,7 +9,7 @@ Klonirajte repozitorij v Visual Studio Code z komando clone in kjer vas zaprosi 
 * En kvadratek ima pred njim napisano "kloniraj", če kliknete na ta kvadratek, se vam bo geslo, ko bo zgenerirano kopiralo v odložišče, s uporabo Ctrl + V ga pa vpišete kamor želite.
 * Geslo se vam bo zgeneriralo direktno pod gumbom "Novo Geslo"
 ## S Tekstovnim Vmesnikom 
-1. Odprite datoteko [tekstovni_vmesnik.py](teskstovni_vmesnik.py) in jo zaženite
+1. Odprite datoteko [tekstovni_vmesnik.py](tekstovni_vmesnik.py) in jo zaženite
 2. V terminalu se vam bodo začela prikazovati vprašanja na katera odgovorite in pritisnite enter.(Dolžina morate nujno podati v številkah!)
 
 
