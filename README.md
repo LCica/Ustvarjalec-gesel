@@ -17,7 +17,7 @@ Klonirajte repozitorij v Visual Studio Code z komando clone in kjer vas zaprosi 
 ## S Tekstovnim Vmesnikom 
 * Odprite datoteko [tekstovni_vmesnik.py](tekstovni_vmesnik.py) in jo zaženite
 * V terminalu se vam bodo začela prikazovati vprašanja na katera odgovorite in pritisnite enter.(Dolžina morate nujno podati v številkah!)
-[Ctrl](http://example.com/){: .btn .btn-purple }
+<button type="button" name="button" class="btn">Ctrl</button>
 
 
 # Avtor
