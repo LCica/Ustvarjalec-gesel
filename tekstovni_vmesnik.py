@@ -53,4 +53,5 @@ for x in range(NAJ_DOL):
 geslo = ""
 for x in rand_skp_list:
     geslo += x
+
 print(geslo)
