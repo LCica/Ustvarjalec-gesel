@@ -7,6 +7,8 @@ Varno geslo naj bi vsebovalo čim več znakov iz različnih naborov znakov(male 
 
 # Kako Uporabljati?
 Klonirajte repozitorij v Visual Studio Code z komando clone in kjer vas zaprosi za link vpišite: https://github.com/LCica/Ustvarjalec-gesel.git
+# Nimate Visual Studio Code?
+Lahko ga naložite na tej povezavi: https://code.visualstudio.com/download 
 ## S Spletnim Vmesnikom
 * Odprite datoteko [ustvarjalec.py](ustvarjalec.py) in jo zaženite 
 * Visual Studio Code vam bo vrnil link kateremu sledite in vas bo usmeril na spletno stran
@@ -17,7 +19,7 @@ Klonirajte repozitorij v Visual Studio Code z komando clone in kjer vas zaprosi 
 ## S Tekstovnim Vmesnikom 
 * Odprite datoteko [tekstovni_vmesnik.py](tekstovni_vmesnik.py) in jo zaženite
 * V terminalu se vam bodo začela prikazovati vprašanja na katera odgovorite in pritisnite enter.(Dolžina morate nujno podati v številkah!)
-<button type="button" name="button" class="btn">Ctrl</button>
+
 
 
 # Avtor
