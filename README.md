@@ -17,9 +17,7 @@ Klonirajte repozitorij v Visual Studio Code z komando clone in kjer vas zaprosi 
 ## S Tekstovnim Vmesnikom 
 * Odprite datoteko [tekstovni_vmesnik.py](tekstovni_vmesnik.py) in jo zaženite
 * V terminalu se vam bodo začela prikazovati vprašanja na katera odgovorite in pritisnite enter.(Dolžina morate nujno podati v številkah!)
-[fork my repository](https://github.com/user/repository/fork)
-[watch this repo](https://github.com/user/repository/subscription)
-[create issue](https://github.com/user/repository/issues/new)
+[![](https://s18955.pcdn.co/wp-content/uploads/2018/02/github.png)](https://github.com/user/repository/subscription)
 
 
 # Avtor
