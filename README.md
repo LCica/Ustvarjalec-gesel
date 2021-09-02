@@ -1,14 +1,16 @@
 # Ustvarjalec-gesel
-Enostaven ustvarjalec naključnih gesel.
+Enostaven ustvarjalec naključnih gesel. Za uporabo potrebujete Visual Studio Code.
+
+# Nimate Visual Studio Code?
+Lahko ga naložite na tej povezavi: https://code.visualstudio.com/
+
 # Kaj Je Geslo?
 Geslo je niz znakov, ki se uporablja za avtentikacijo uporabnikov računalniškega sistema, oziroma za zaščito podatkov.
 
 Varno geslo naj bi vsebovalo čim več znakov iz različnih naborov znakov(male črke, velike črke, simboli,...). Pri varnosti pa tudi veliko pripomore dolžina gesla. Gesla, ki jih izpeljemo iz besed, so primer "slabih" gesel. Gesel tudi ne smemo povedati nikomur! Geslo je osebno in ne javno.
-
 # Kako Uporabljati?
 Klonirajte repozitorij v Visual Studio Code z komando clone in kjer vas zaprosi za link vpišite: https://github.com/LCica/Ustvarjalec-gesel.git
-# Nimate Visual Studio Code?
-Lahko ga naložite na tej povezavi: https://code.visualstudio.com/download 
+download 
 ## S Spletnim Vmesnikom
 * Odprite datoteko [ustvarjalec.py](ustvarjalec.py) in jo zaženite 
 * Visual Studio Code vam bo vrnil link kateremu sledite in vas bo usmeril na spletno stran
